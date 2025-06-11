@@ -1,6 +1,7 @@
 import { Link } from 'expo-router';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import { FocusButton } from '../components/FocusButton';
+import { router } from 'expo-router';
 
 export default function Index() {
   return (
@@ -16,7 +17,7 @@ export default function Index() {
         <Image source={require('../assets/images/ImagemTelaInicial.png')} style={styles.image}/>
         <FocusButton
           title="Quero iniciar!"
-          onPress={() => {console.log('Iniciar!')}}
+          onPress={() => router.replace('/pomodoro')}
         />
       </View>
       <View style={styles.footer}>
